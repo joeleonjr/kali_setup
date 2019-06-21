@@ -15,6 +15,7 @@ echo "#                                                            #"
 echo "#                                                            #"
 echo "#   Kali setup script built by github.com/kingofleon         #"
 echo "#                                                            #"
+echo "#                                                            #"
 echo "#   Note: Author makes no claims or warranties. Use at       #"
 echo "#         your own risk.                                     #"
 echo "#                                                            #"
@@ -58,10 +59,12 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
-#8 Other installs (mingw for windows cross compiling, ftp for file transfers)
+#8 Other installs (mingw for windows cross compiling, ftp for file transfers, golang, rinetd)
 sudo apt-get install mingw-w64
 sudo apt-get install python-pyftpdlib
 sudo apt-get install cifs-utils
+sudo apt-get install golang
+sudo apt-get install rinetd
 
 #9 Add in @kingofleon scripts noisy-recon + privesc enumeration scripts
 wget https://raw.githubusercontent.com/kingofleon/noisy-recon/master/noisy-recon -P /usr/local/bin
@@ -73,6 +76,7 @@ wget https://raw.githubusercontent.com/411Hall/JAWS/master/jaws-enum.ps1 -P /usr
 wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -P /usr/share/privesc
 wget https://raw.githubusercontent.com/jondonas/linux-exploit-suggester-2/master/linux-exploit-suggester-2.pl -P /usr/share/privesc
 wget http://www.securitysift.com/download/linuxprivchecker.py -P /usr/share/privesc
+wget https://raw.githubusercontent.com/PowerShellMafia/PowerSploit/master/Privesc/PowerUp.ps1 -P /usr/share/privesc
 
 #10 updatedb for locate
 updatedb
